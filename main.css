@@ -28,10 +28,15 @@ body::before{
     font-size: 32px;
     color: black;
     text-align: center;
+    margin-bottom: 60px;
 }
 .login-area{
     width: 400px;
     position: relative;
+    margin-top:20px;
+}
+.login-area:first-child{
+    margin-top:  0;
 }
 .login-area input{
     width: 100%;
@@ -49,10 +54,29 @@ body::before{
     top: 15px;
     font-size: 18px;
     color: #999;
-    transition: top .5s ease;
+    transition: all .5s ease;
+}
+.login-area label.warning{
+    
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
 }
 .login-area input:focus + label,
 .login-area input:valid + label{
-    top:0;
+    top:-2px;
     font-size:13px;
+}
+.btn-area{
+    margin-top: 30px;
+}
+.btn-area button{
+    width:100%;
+    height: 50px;
+    background: #166cea;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }

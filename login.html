@@ -4,31 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>뉴진스 팬클럽 로그인</title>
-    <link rel="stylesheet" href="./main.css">
+    <title>Bunnies</title>
+    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="imgs/favicon.ico">
-    <script src="./main.js"></script>
+    <script src="javascript/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   </head>
   <body>
-    <section class="login-form">
-      <h1>뉴진스 팬클럽 로그인</h1>
-        <form action="">
-          <div class="login-area">
-            <input type="text" name="id" id="id" autocomplete="off" required>
-            <label for="id">ID</label>
-          </div>
-          <div class="login-area">
-            <input type="password" name="pw" id="pw" autocomplete="off" required>
-            <label for="pw">PASSWORD</label>
-          </div>
-          <div class="btn-area">
-            <button id = "btn_login" type="submit">로그인</button>
-            <button type="submit" onclick="register()">회원가입</button>
-          </div>
-        </form>
-    </section>
+    <header>
+
+    </header>
+    <div class="login_box">
+      <section class="login-form">
+        <h1>Bunnies</h1>
+          <form action="">
+            <div class="login-area">
+              <input type="text" name="id" id="id" autocomplete="off" required>
+              <label for="id">ID</label>
+            </div>
+            <div class="login-area">
+              <input type="password" name="pw" id="pw" autocomplete="off" required>
+              <label for="pw">PASSWORD</label>
+            </div>
+            <div class="btn-area">
+              <button id = "btn_login" type="submit" onclick="login()">로그인</button>
+              <button type="submit" onclick="register()">회원가입</button>
+            </div>
+          </form>
+      </section>
+    </div>
     <script>
       let id = $('#id')
       let pw = $('#pw')

@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/fanclub.css">
+    <script src="javascript/fanclub.js" defer></script>
     <title>뉴진스 팬클럽</title>
 </head>
 <body>
-    팬클럽
+   <div class="myPost">
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput" id="name">닉네임</label>
+    </div>
+
+    <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+        <label for="floatingTextarea" id="comment">응원 댓글</label>
+    </div>
+    <div class="postButton">
+        <button type="button" class="btn btn-dark" onclick="add_comment()">응원 남기기</button>
+
+    </div>
+</div>
+<div id="cardArea">
+    <div class="card" id="cardBox">
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>새 앨범 기대중입니다</p>
+                <footer class="blockquote-footer">김명주</footer>
+                <button type="button" class="btn btn-dark" onclick="delete_comment()">삭제</button>
+            </blockquote>
+        </div>
+    </div>
+    <div class="card" id="cardBox">
+
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>콘서트 언제 하시나요?</p>
+                <footer class="blockquote-footer">김명주</footer>
+                <button type="button" class="btn btn-dark" onclick="delete_comment()">삭제</button>
+            </blockquote>
+        </div>
+    </div>
+    <div class="card" id="cardBox">
+
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>응원합니다.</p>
+                <footer class="blockquote-footer">김명주</footer>
+                <button type="button" class="btn btn-dark" onclick="delete_comment()">삭제</button>
+            </blockquote>
+        </div>
+    </div>
+</div>
 </body>
 </html>

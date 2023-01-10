@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*background: url(https://img.etnews.com/news/article/2022/10/30/article_30091212839104.jpg) no-repeat center;
+    background-size: cover;*/
+}
+body::before{
+    content:"";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.login-form{
+    position: relative;
+    z-index: 2;
+}
+.login-form h1{
+    font-size: 32px;
+    color: black;
+    text-align: center;
+}
+.login-area{
+    width: 400px;
+    position: relative;
+}
+.login-area input{
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    font-size: 18px;
+    color: black;
+    outline: none;
+}
+.login-area label{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    font-size: 18px;
+    color: #999;
+    transition: top .5s ease;
+}
+.login-area input:focus + label,
+.login-area input:valid + label{
+    top:0;
+    font-size:13px;
+}

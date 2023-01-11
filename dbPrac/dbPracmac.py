@@ -26,8 +26,8 @@ db.newjeans.insert_one({'ID' : 'wjdqndrl','PW' : '12345','NAME' : '정붕기','H
     #print(user)
 
 # 특정 결과 값 뽑기
-#user = db.users.find_one({'name':'bobby'})
-#print(user)
+user = db.newjeans.find_one({'ID':'wjdqndrl'})
+print(user)
 
 # 수정하기
 #db.users.update_one({'name':'bobby'},{'$set':{'age':28}})

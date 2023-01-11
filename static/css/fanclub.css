@@ -7,9 +7,17 @@
 
 
 @keyframes fade-inout{
-    0%{opacity: 1;}
-    100%{opacity: 0;}
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
+
+@keyframes btn_fade-inout{
+    0%{
+
+    }
+}
+
+
 
 .loading{
     /*페이드 인-아웃 적용 구역*/
@@ -26,7 +34,9 @@
     z-index: 1;
     
 }
-
+.btn_fade{
+   
+}
 
 .header{
     width: 100%;

@@ -1,14 +1,11 @@
 function register(){
-    window.location.href='register.html'
+    window.location.href='../templates/signin.html'
 }
 
 
 
 function login(){
-    $.ajax({
-        type:"POST",
-        url:"",
-        data:{},
-
-    })
+    // let id = document.getElementById('')
+    // let pw = document.getElementById('')
+    window.location.href='../templates/fanclub.html'
 }

@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="뉴진스 팬클럽"/> <!-- 카드에 표시하고 싶은 제목 -->
+    <meta property="og:image" content="https://img.etnews.com/news/article/2022/10/30/article_30091212839104.jpg"/> <!-- 카드에 표시하고 싶은 이미지 -->
+    <meta property="og:url" content="login.html"/> <!-- 표시하고싶은 url주소 -->
+    <meta property="og:description" content="뉴진스 팬클럽에 어서오세요"/> <!-- 카드에 표시하고 싶은 설명 -->
+
     <title>Bunnies</title>
     <link rel="stylesheet" href="../static/css/login.css">
     <link rel="icon" href="../static/imgs/favicon.ico">
@@ -15,12 +20,12 @@
     <header>
 
     </header>
-
-    <form>
+    
+    <form action="/login" method="post">
       <div class="login_box">
         <section class="login-form">
           <h1>Bunnies</h1>
-            <form action="">
+            
               <div class="login-area">
                 <input type="text" name="id" id="userId" spellcheck ="false" autocomplete="off" required>
                 <label for="id">ID</label>
@@ -33,7 +38,7 @@
                 <button id = "btn_login" type="submit" onclick="login()">로그인</button>
                 <button type="submit" onclick="register()">회원가입</button>
               </div>
-            </form>
+            
         </section>
       </div>
     </form>

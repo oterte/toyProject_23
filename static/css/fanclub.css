@@ -5,6 +5,35 @@
     background-size: auto;
 } */
 
+
+@keyframes fade-inout{
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.loading{
+    /*페이드 인-아웃 적용 구역*/
+    animation-name: fade-inout;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+
+    /*스타일 적용*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(https://img.etnews.com/news/article/2022/10/30/article_30091212839104.jpg) no-repeat center;
+    background-size: cover;
+    z-index: 1;
+    
+}
+
+
+.header{
+    width: 100%;
+    height: 400px;
+    background: url(https://img.etnews.com/news/article/2022/10/30/article_30091212839104.jpg) no-repeat center;
+    background-size: auto;
+}
 .myTitle {
 
     width: 100%;

@@ -7,5 +7,13 @@ function register(){
 function login(){
     // let id = document.getElementById('')
     // let pw = document.getElementById('')
-    window.location.href='../templates/fanclub.html'
+      let id = $('#userId')
+      let pw = $('#userPW')
+
+      	$.ajax({
+        type : 'post',
+        url : '/login',
+        data : {id,pw}
+	  });
+
 }

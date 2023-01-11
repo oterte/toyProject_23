@@ -18,7 +18,7 @@
 
 
 
-.loading{
+.loading{ /*배경사진*/
     /*페이드 인-아웃 적용 구역*/
     animation-name: fade-inout;
     animation-duration: 3s;
@@ -37,7 +37,7 @@
     
 }
 
-.btn_fade{
+.btn_fade{/*버튼 사진*/
     /*버튼 페이드인아웃 효과 구역*/
     animation-name: btn_fade-inout;
     animation-duration: 3s;

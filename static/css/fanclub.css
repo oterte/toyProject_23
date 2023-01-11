@@ -12,9 +12,8 @@
 }
 
 @keyframes btn_fade-inout{
-    0%{
-
-    }
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 
@@ -26,6 +25,9 @@
     animation-fill-mode: forwards;
 
     /*스타일 적용*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -34,7 +36,20 @@
     z-index: 1;
     
 }
+
 .btn_fade{
+    /*버튼 페이드인아웃 효과 구역*/
+    animation-name: btn_fade-inout;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    /*스타일 적용*/
+    display: inline-block;
+    background: url(../imgs/nwjns_bunny.jpg)no-repeat;
+    background-size: contain;
+    
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
    
 }
 

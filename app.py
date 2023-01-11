@@ -42,7 +42,7 @@ def login():
 
 #main
 @app.route('/fanclub', methods=['GET','POST'])
-def mainhome():
+def fanclub():
     return render_template('fanclub.html')
 
 

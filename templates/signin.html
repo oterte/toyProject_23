@@ -3,65 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Bunnies signin</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../javascript/register.js"></script>
-    <link rel="icon" href="../static/imgs/favicon.ico">
+    <link rel="stylesheet" href="signin.css" />
     
     <style>
-        *{
-            font-family: 'Anton', sans-serif;
-        }
-    .albumImage {
-        width: 100%;
-        height: 2000px;
 
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url('https://w.namu.la/s/0f0f182dcbb699f9b1d7d2e026b8654dbc881bfacf21427fe20dca1c0557bd38ffeb0c108c070906773b0e3f16eaf85ca44ab8481804761662c5eaa6b4594653c32fe5a9ca91c1eed3540b22fca35769231470dbc442fdc1bef946d2b404f7d0773d97f968dd6b2e50abe7fb9749bde5');
-        background-position: center 100%;
-        
-        color: white;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .infoBox{
-
-        border-radius: 10%;
-        background-color: royalblue;
-        background-color: rgba(65, 105, 225, 0.5);
-    }
-    .infoBox >.info{
-        margin: 20px 20px 20px 20px;
-    }    
-    .info >.input{
-        border-radius: 10%;
-    }
-    .btn_sign{
-        text-align: center;
-        border-radius: 10%; 
-        margin: 5px 5px 5px 5px;
-
-        
-    }
-    .signin{
-        text-align: center;             
-    }
-    .btn_wrap{
-       
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
-   
     </style>
-    <script>
 
-    </script>
+    <script src="signin.js"> </script>
+
 </head>
 <body>
    
@@ -74,7 +27,7 @@
             </div>    
             
             <div class="info" id="INFOPW">
-                <input type="text" style="border-radius: 5px;" name="pw" id="pw" placeholder="Password" autocomplete="off" required>
+                <input type="password" style="border-radius: 5px;" name="pw" id="pw" placeholder="Password" autocomplete="off" required>
                 <label for="pw"></label>
             </div>
             <div class="info" id="INFONAME">
@@ -87,12 +40,12 @@
             </div>
             <div class="btn_wrap">
                 <div class="btn_sign">
-                    <button onclick="register()" type="button" class="btn btn-light">Sign in</button>
+                    <button onclick="signIn()" type="button" class="btn btn-light">Sign in</button>
         
                 </div>
                 <div class="btn_sign">
                     
-                    <button onclick="goback()" type="button" class="btn btn-light">Back</button>
+                    <button onclick="location.href='login3.html'" type="button" class="btn btn-light">Back</button>
                 </div>
             </div>    
         </div>

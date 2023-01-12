@@ -32,36 +32,49 @@ function updateInput(){
     const comment = $('#floatingTextarea').val()
     return {name,comment}
 }
-
-
-
-
-
-
-
 function add_comment() {
-commentcnt = commentcnt+1;
-const {name, comment} = updateInput();
-list.push({name, comment})// 디비에 집어넣는 포인트
-console.log(list)
-    let temp_html = `<div class="card" id="cardBox-${commentcnt}">
-<div class="card-body">
-<blockquote class="blockquote mb-0">
-    <p>${comment}</p>
-    <footer class="blockquote-footer">${name} </footer>
-    <button type="button" class="btn btn-dark" onclick="delete_comment(${commentcnt})">삭제</button>
-</blockquote>
-
-</div>
-</div>`
-    if(name == ""  || comment == ""){
-        alert("닉네임과 내용을 정확히 입력해주세요")
-        
-    }else{
-        $('#cardArea').append(temp_html)
+    commentcnt = commentcnt+1;
+    const {name, comment} = updateInput();
+    list.push({name, comment})// 디비에 집어넣는 포인트
+    console.log(list)
+       
+    
     }
 
+function show_comment(){   
+   
+    $.ajax({
+        type : 'GET',
+        url : '/fanclub',
+        data: {},
+        success: function(response){
+            console.log(response)
+    //         let temp_html = `<div class="card" id="cardBox-${commentcnt}">
+    //   <div class="card-body">
+    //   <blockquote class="blockquote mb-0">
+    //       <p>${comment}</p>
+    //       <footer class="blockquote-footer">${name} </footer>
+    //       <button type="button" class="btn btn-dark" onclick="delete_comment(${commentcnt})">삭제</button>
+    //   </blockquote>
+      
+    //   </div>
+    //   </div>`
+    //       if(name == ""  || comment == ""){
+    //           alert("닉네임과 내용을 정확히 입력해주세요")
+              
+    //       }else{
+    //           $('#cardArea').append(temp_html)
+    //       }
+        }
+	  });
+      
+      
 }
+
+
+
+show_comment();
+
 
 
 
@@ -74,7 +87,7 @@ init();
 
 
 
-function comment(){
+function plus_comment(){
       let name = $('#floatingInput').val() 
       let comment = $('#floatingTextarea').val()
 

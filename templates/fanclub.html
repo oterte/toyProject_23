@@ -17,22 +17,18 @@
     <script src="../javascript/fanclub.js" defer></script>
 
     <title>뉴진스 팬클럽</title>
-    
+
 </head>
 
 <body>
 
     <div id="img1" class="loading">
-        
+
     </div>
 
-    <div class="header">
-        <p>님 환영합니다</p>
-    </div>
+    <div class="header"></div>
 
-    <div class="postButton">
-        <button type="button" class="btn btn-dark" onclick="add_comment()">응원 남기기</button>
-
+    
 
     <form action="/fanclub" method="post">
         <div class="myPost">
@@ -42,17 +38,17 @@
             </div>
 
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" name="comment"></textarea>
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                    name="comment"></textarea>
 
                 <label for="floatingTextarea" id="comment">응원 댓글</label>
             </div>
             <div class="postButton">
-<<<<<<< Updated upstream
+
                 <button type="submit" class="btn btn-dark" onclick="add_comment()">응원 남기기</button>
-=======
-                <button type="submit" class="btn btn-dark" onclick="plus_comment()" >응원 남기기</button>
-                <button type="button" class="btn btn-dark" id = "btn_go" onclick="location.href='/fanclub/list'">응원 보러가기</button>
->>>>>>> Stashed changes
+
+                <button type="submit" class="btn btn-dark" id = "btn_go" onclick="location.href='/list'">응원 보러가기</button>
+
             </div>
         </div>
     </form>
@@ -92,10 +88,10 @@
     </div>
 </body>
 <script>
-    setTimeout(function(){
-    const img1 = document.getElementById('img1')
-    img1.style.display='none'
-},3000)
+    setTimeout(function () {
+        const img1 = document.getElementById('img1')
+        img1.style.display = 'none'
+    }, 3000)
 
 </script>
 

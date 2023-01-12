@@ -61,13 +61,22 @@ def delete():
     deleteid = request.form.get('id')
     # deletecomment = request.form.get('comment')
 
-<<<<<<< Updated upstream
+
+
 
     db.newjeanscomment.delete_one({'name':deleteid})
-=======
+
     db.newjeanscomment.delete_one({'id':deleteid})
 
->>>>>>> Stashed changes
+
+#list 불러오기
+@app.route('/fanclub', methods=['GET','POST'])
+def extract_list():
+
+
+    exlist = list(db.newjeanscomment.find({},{'_id':False}))
+    print(exlist)
+
 
 #signin
 @app.route('/signin', methods=['GET','POST'])
@@ -86,9 +95,6 @@ def signin():
         return render_template('signin.html')
     else:
         return render_template('signin.html')
-
-
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050, debug=True)

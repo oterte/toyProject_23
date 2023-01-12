@@ -17,11 +17,11 @@ function show_name(){
         success: function (response) {
             console.log(response)
             let comment_list = response
+            
             for(let i = 0; i<comment_list.length; i++){
                 let list_name = comment_list[i]['name']
                 let list_comment = comment_list[i]['comment']
-            }
-                    let temp_html = `<div class="card" id="cardBox-${commentcnt}">
+                let temp_html = `<div class="card" id="cardBox-${commentcnt}">
               <div class="card-body">
               <blockquote class="blockquote mb-0">
                   <p>${list_comment}</p>
@@ -37,10 +37,30 @@ function show_name(){
                   }else{
                       $('#cardArea').append(temp_html)
                   }
+            }
+                    
         }
     });
 }
+function add_comment() {
+    commentcnt = commentcnt + 1;
+    const { name, comment } = updateInput();
+    list.push({ name, comment })// 디비에 집어넣는 포인트
+    console.log(list)
 
+
+}
+function plus_comment() {
+    let name = $('#floatingInput').val()
+    let comment = $('#floatingTextarea').val()
+
+    $.ajax({
+        type: 'post',
+        url: '/fanclub',
+        data: { name, comment }
+    });
+
+}
 
 function init() {
     // 디비에서 있는 리스트 불러오기
@@ -90,14 +110,6 @@ function updateInput() {
     const name = $('#floatingInput').val()
     const comment = $('#floatingTextarea').val()
     return { name, comment }
-}
-function add_comment() {
-    commentcnt = commentcnt + 1;
-    const { name, comment } = updateInput();
-    list.push({ name, comment })// 디비에 집어넣는 포인트
-    console.log(list)
-
-
 }
 
 

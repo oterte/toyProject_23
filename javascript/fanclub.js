@@ -9,7 +9,7 @@ const list =
 
     }]
 
-function show_name(){
+function show_comment(){
     $.ajax({
         type: 'GET',
         url: '/fanclub',
@@ -42,6 +42,11 @@ function show_name(){
         }
     });
 }
+show_comment();
+
+
+
+
 function add_comment() {
     commentcnt = commentcnt + 1;
     const { name, comment } = updateInput();

@@ -38,15 +38,15 @@ def login():
     else:
         return redirect('/fanclub')
 
-
-
-#main
+@app.route('/fanclub/list', methods=['GET'])
+def exlist():
+    exlist = list(db.newjeanscomment.find({},{'_id':False}))
+    return jsonify({'list': exlist})
+#comentinsert
 @app.route('/fanclub', methods=['GET','POST'])
-def fanclub():
+def insert():
     name = request.form.get('name')
     comment = request.form.get('comment')
-
-
 
 #db 넣기
     if name is not None:
@@ -56,7 +56,7 @@ def fanclub():
         return render_template('fanclub.html')
 
 #comment delete
-@app.route('/fanclub', methods=['GET','POST'])
+@app.route('/fanclub/delete', methods=['GET','POST'])
 def delete():
     deleteid = request.form.get('id')
     # deletecomment = request.form.get('comment')

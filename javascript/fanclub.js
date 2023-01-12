@@ -33,10 +33,7 @@ function updateInput(){
     return {name,comment}
 }
 
-function fadeOut(){
-    const img = document.getElementById('img1')
-    img.style.display='none'
-}
+
 
 
 
@@ -59,6 +56,7 @@ console.log(list)
 </div>`
     if(name == ""  || comment == ""){
         alert("닉네임과 내용을 정확히 입력해주세요")
+        
     }else{
         $('#cardArea').append(temp_html)
     }
@@ -73,3 +71,17 @@ function delete_comment(cardNumber){
 }
 
 init();
+
+
+
+function comment(){
+      let name = $('#floatingInput').val() 
+      let comment = $('#floatingTextarea').val()
+
+      	$.ajax({
+        type : 'post',
+        url : '/fanclub',
+        data : {name,comment}
+	  });
+
+}

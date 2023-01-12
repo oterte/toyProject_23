@@ -62,7 +62,12 @@ def delete():
     # deletecomment = request.form.get('comment')
 
 
+
+
+    db.newjeanscomment.delete_one({'name':deleteid})
+
     db.newjeanscomment.delete_one({'id':deleteid})
+
 
 #list 불러오기
 @app.route('/fanclub', methods=['GET','POST'])
@@ -71,6 +76,7 @@ def extract_list():
 
     exlist = list(db.newjeanscomment.find({},{'_id':False}))
     print(exlist)
+
 
 #signin
 @app.route('/signin', methods=['GET','POST'])

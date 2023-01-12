@@ -33,9 +33,7 @@ function updateInput(){
     return {name,comment}
 }
 
-setTimeout(function(){
-    img1.style.display='none'
-},3000)
+
 
 
 

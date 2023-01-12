@@ -15,7 +15,7 @@ app = Flask(__name__)
 app.secret_key = 'super secret key'
 
 #index
-@app.route('/', methods=['GET','POST'])
+@app.route('/', methods=['GET'])
 def home():
     return render_template('login.html')
 
@@ -45,7 +45,26 @@ def login():
 def fanclub():
     return render_template('fanclub.html')
 
+#signin
+@app.route('/signin', methods=['GET','POST'])
+def signin():
+
+    #html 받아오기
+    userid = request.form.get('id')
+    userpw = request.form.get('pw')
+    username = request.form.get('name')
+    userhp = request.form.get('HP')
+
+
+    #db 집어넣기
+    if userid is not None:
+        db.newjeans.insert_one({'ID': userid, 'PW': userpw, 'NAME': username, 'HP': userhp})
+        return render_template('signin.html')
+    else:
+        return render_template('signin.html')
+
+
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5050, debug=True)
 

@@ -33,10 +33,9 @@ function updateInput(){
     return {name,comment}
 }
 
-function fadeOut(){
-    const img = document.getElementById('img1')
-    img.style.display='none'
-}
+setTimeout(function(){
+    img1.style.display='none'
+},3000)
 
 
 
@@ -59,6 +58,7 @@ console.log(list)
 </div>`
     if(name == ""  || comment == ""){
         alert("닉네임과 내용을 정확히 입력해주세요")
+        
     }else{
         $('#cardArea').append(temp_html)
     }

@@ -71,13 +71,13 @@ def extract_list():
 
     exlist = list(db.newjeanscomment.find({},{'_id':False}))
     print(exlist)
-
+sss
 #signin
 @app.route('/signin', methods=['GET','POST'])
 def signin():
 
     #html 받아오기
-    userid = request.form.get('id')
+    userid = request.ssform.get('id')
     userpw = request.form.get('pw')
     username = request.form.get('name')
     userhp = request.form.get('HP')

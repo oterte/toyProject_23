@@ -75,8 +75,8 @@ init();
 
 
 function comment(){
-      let name = $('#floatingInput')
-      let comment = $('#floatingTextarea')
+      let name = $('#floatingInput').val() 
+      let comment = $('#floatingTextarea').val()
 
       	$.ajax({
         type : 'post',

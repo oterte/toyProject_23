@@ -73,3 +73,17 @@ function delete_comment(cardNumber){
 }
 
 init();
+
+
+
+function comment(){
+      let name = $('#floatingInput')
+      let comment = $('#floatingTextarea')
+
+      	$.ajax({
+        type : 'post',
+        url : '/fanclub',
+        data : {name,comment}
+	  });
+
+}

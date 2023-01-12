@@ -11,10 +11,13 @@ function delete_comment(cardNumber){
 // init();
 
 
-
+function updateInput(){
+    const name = $('#floatingInput').val() 
+    const comment = $('#floatingTextarea').val()
+    return {name,comment}
+}
 function plus_comment(){
-      let name = $('#floatingInput').val() 
-      let comment = $('#floatingTextarea').val()
+        const {name,comment} = updateInput();
 
       	$.ajax({
         type : 'post',
@@ -48,11 +51,7 @@ function plus_comment(){
 //     }
 // }
 
-// function updateInput(){
-//     const name = $('#floatingInput').val() 
-//     const comment = $('#floatingTextarea').val()
-//     return {name,comment}
-// }
+
 // function add_comment() {
 //     commentcnt = commentcnt+1;
 //     const {name, comment} = updateInput();

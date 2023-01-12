@@ -43,7 +43,26 @@ def login():
 #main
 @app.route('/fanclub', methods=['GET','POST'])
 def fanclub():
-    return render_template('fanclub.html')
+    name = request.form.get('name')
+    comment = request.form.get('comment')
+
+
+
+#db 넣기
+    if name is not None:
+        db.newjeanscomment.insert_one({'name':name, 'comment':comment})
+        return render_template('fanclub.html')
+    else:
+        return render_template('fanclub.html')
+
+#comment delete
+@app.route('/fanclub', methods=['GET','POST'])
+def delete():
+    deleteid = request.form.get('id')
+    # deletecomment = request.form.get('comment')
+
+
+    db.newjeanscomment.delete_one({'name':deleteid})
 
 #signin
 @app.route('/signin', methods=['GET','POST'])
@@ -56,12 +75,13 @@ def signin():
     userhp = request.form.get('HP')
 
 
-    #db 집어넣기
+#db 집어넣기
     if userid is not None:
         db.newjeans.insert_one({'ID': userid, 'PW': userpw, 'NAME': username, 'HP': userhp})
         return render_template('signin.html')
     else:
         return render_template('signin.html')
+
 
 
 

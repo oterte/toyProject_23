@@ -61,8 +61,13 @@ def delete():
     deleteid = request.form.get('id')
     # deletecomment = request.form.get('comment')
 
+<<<<<<< Updated upstream
 
     db.newjeanscomment.delete_one({'name':deleteid})
+=======
+    db.newjeanscomment.delete_one({'id':deleteid})
+
+>>>>>>> Stashed changes
 
 #signin
 @app.route('/signin', methods=['GET','POST'])
